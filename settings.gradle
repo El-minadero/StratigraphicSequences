@@ -1,0 +1,3 @@
+rootProject.name = 'SedimentarySequences'
+include ':GeoWorldLibrary'
+project(':GeoWorldLibrary').projectDir = new File(settingsDir,'../GeoWorldLibrary')

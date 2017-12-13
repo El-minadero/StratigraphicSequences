@@ -8,6 +8,7 @@ import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 @ConfigSerializable
 public class StratigraphicDefaults {
 	public static final TypeToken<StratigraphicDefaults> type = TypeToken.of(StratigraphicDefaults.class);
+	
 	@Setting
 	private OffsetMapDefaults offsetDefaults;
 	@Setting

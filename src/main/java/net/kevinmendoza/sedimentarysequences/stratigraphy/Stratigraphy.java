@@ -75,4 +75,11 @@ class Stratigraphy implements IGeology {
 		
 	}
 
+	@Override
+	public String getLocationData(Vector3i globalVector) {
+		return "Stratigraphic Sequence at Location:\n" +
+				"GeologicOffset:" + offsetMap.getNoise(globalVector) + "\n"
+				+ formationSequence.toString();
+	}
+
 }

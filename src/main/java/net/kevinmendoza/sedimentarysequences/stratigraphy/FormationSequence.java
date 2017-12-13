@@ -40,6 +40,10 @@ class FormationSequence {
 			return aboveCenterFormation.getRock(newQuery);
 		}
 	}
+	
+	public String toString(Vector3i globalVector) {
+		return "";
+	}
 
 	public static class FormationSequenceBuilder {
 		
@@ -57,4 +61,6 @@ class FormationSequence {
 		public Formation getNegativeFormation() { return this.belowCenterFormation; }
 		public Formation getPositiveFormation() { return this.aboveCenterFormation; }
 	}
+
+	
 }

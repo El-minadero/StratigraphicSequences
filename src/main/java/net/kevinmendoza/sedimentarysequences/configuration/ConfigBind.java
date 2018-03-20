@@ -6,9 +6,8 @@ public class ConfigBind extends AbstractModule {
 
 	@Override
 	protected void configure() {
-		bind(IGlobalDefaults.class).to(GlobalDefaults.class);
-		bind(IFormationSequenceDefaults.class).to(FormationSequenceDefaults.class);
-		bind(IOffsetMapDefaults.class).to(OffsetMapDefaults.class);
+		bind(IStratigraphicDefaults.class).to(StructureDefaults.class);
+		bind(ILayerDefaults.class).to(LayerDefaults.class);
 	}
 
 }

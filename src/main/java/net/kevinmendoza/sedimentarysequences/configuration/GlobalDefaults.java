@@ -1,23 +1,23 @@
 package net.kevinmendoza.sedimentarysequences.configuration;
 
+import java.util.List;
+
 import com.google.common.reflect.TypeToken;
 
-import net.kevinmendoza.geoworldlibrary.geology.compositerockdata.Order;
 import ninja.leaping.configurate.objectmapping.Setting;
 import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 
 @ConfigSerializable
-public class GlobalDefaults implements IGlobalDefaults {
+public class GlobalDefaults  {
 	public static final TypeToken<GlobalDefaults> type = TypeToken.of(GlobalDefaults.class);
-
 	@Setting
-	private Order order;
+	StructureDefaults stratigraphicDefaults;
+	@Setting
+	LayerDefaults layerDefaults;
 	
 	public GlobalDefaults() {
-		order = Order.FIRST;
+		stratigraphicDefaults=new StructureDefaults();
+		layerDefaults=new LayerDefaults();
 	}
-	@Override
-	public Order getOrder() {
-		return order;
-	}
+	
 }

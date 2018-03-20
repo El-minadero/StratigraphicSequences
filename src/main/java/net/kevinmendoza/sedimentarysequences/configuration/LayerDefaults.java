@@ -1,39 +1,25 @@
 package net.kevinmendoza.sedimentarysequences.configuration;
 
-import java.util.Random;
-
-import com.google.common.reflect.TypeToken;
-
-import net.kevinmendoza.geoworldlibrary.proceduralgeneration.configuration.PrimitiveWrapperConfig.IntMinMax;
+import net.kevinmendoza.geoworldlibrary.geology.rockdata.IData;
 import ninja.leaping.configurate.objectmapping.Setting;
 import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 
 @ConfigSerializable
-public class LayerDefaults {
-	public static final TypeToken<LayerDefaults> type = TypeToken.of(LayerDefaults.class);
+class LayerDefaults implements ILayerDefaults {
 	
 	@Setting
-	private String rockName;
+	AssemblageDefaults sedimentaryAssemblage;
 	@Setting
-	private IntMinMax intMinMax;
-	@Setting
-	private double probability;
-	@Setting
-	private int variants;
+	StructureDefaults structure;
 
-	public LayerDefaults(String rockName, int variants,int minThickness, int maxThickness, double probability) {
-		this.rockName = rockName;
-		this.variants = variants;
-		this.intMinMax = new IntMinMax(minThickness,maxThickness);
-		this.probability = probability;
+	@Override
+	public IData getData(long seed) {
+		return sedimentaryAssemblage.getData(seed);
 	}
 
-	public double getProbability() { return probability; }
-
-	public ILayer getLayer(Random rand) {
-		int variant = rand.nextInt(variants);
-		int width   = intMinMax.getValue(rand);
-		return new SimpleLayer(rockName + ":"+ variant,width);
+	@Override
+	public int getThickness(long seed, IData data) {
+		return sedimentaryAssemblage.getThickness(seed);
 	}
 
 }

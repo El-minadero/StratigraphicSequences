@@ -1,5 +1,7 @@
 package net.kevinmendoza.sedimentarysequences.stratigraphy;
 
+import org.spongepowered.api.item.inventory.type.InventoryColumn;
+
 import com.google.inject.Injector;
 
 import net.kevinmendoza.geoworldlibrary.geology.recursivegeology.IGeology;

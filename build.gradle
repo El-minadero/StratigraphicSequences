@@ -8,6 +8,10 @@ description = 'Sedimentary Sequences'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+test {
+    useJUnitPlatform()
+}
+
 repositories {
     mavenCentral()
     maven {
@@ -19,4 +23,6 @@ repositories {
 dependencies {
     compile 'org.spongepowered:spongeapi:5.0.0'
     compile project(':GeoWorldLibrary')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
 }

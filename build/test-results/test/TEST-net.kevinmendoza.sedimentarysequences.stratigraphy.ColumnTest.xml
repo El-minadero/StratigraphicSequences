@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2018-03-21T15:58:04" hostname="Kevins-MBP.domain" time="0.04">
+  <properties/>
+  <testcase name="testGetThirdLayer3iData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.004"/>
+  <testcase name="testIsOutside1()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.001"/>
+  <testcase name="testIsOutside2()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.001"/>
+  <testcase name="testGetFirstLayerDepthData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.001"/>
+  <testcase name="testGetSecondLayerDepthData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.001"/>
+  <testcase name="testGetDefaultUpperBoundData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.001"/>
+  <testcase name="testGetThirdLayerDepthData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.002"/>
+  <testcase name="testGetFirstLayer3iData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.001"/>
+  <testcase name="testGetDefaultLayer2ivec()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.004"/>
+  <testcase name="testIsInside()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.002"/>
+  <testcase name="testGetSecondLayer3iData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.001"/>
+  <testcase name="testGetDefaultLowerBoundData()" classname="net.kevinmendoza.sedimentarysequences.stratigraphy.ColumnTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

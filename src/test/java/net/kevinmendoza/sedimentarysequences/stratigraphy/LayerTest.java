@@ -1,6 +1,7 @@
 package net.kevinmendoza.sedimentarysequences.stratigraphy;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -10,12 +11,12 @@ import net.kevinmendoza.geoworldlibrary.geology.rockdata.RockData;
 
 class LayerTest {
 	
-	private ILayer layer;
-	private IData defaultData;
+	private static ILayer layer;
+	private static IData defaultData;
 	private static int thickness = 5;
 	
 	@BeforeAll
-	void createLayer() {
+	static void createLayer() {
 		defaultData = new RockData.Builder().build();
 		layer = new Layer.Builder()
 				.setData(defaultData)

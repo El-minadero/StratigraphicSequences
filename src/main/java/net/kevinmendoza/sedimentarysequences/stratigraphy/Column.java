@@ -14,7 +14,7 @@ import net.kevinmendoza.geoworldlibrary.geology.rockdata.IData;
 import net.kevinmendoza.geoworldlibrary.geology.rockdata.RockData;
 import net.kevinmendoza.geoworldlibrary.geology.rockdata.Texture;
 
-class Column implements IGeology {
+public class Column implements IColumn {
 	private final int thickness;
 	private final List<IData> layers;
 	private static final IData fillerRock = new RockData.Builder()
@@ -50,14 +50,14 @@ class Column implements IGeology {
 		return dataList;
 	}
 
-	private final IData getData(int depth) {
+	public final IData getData(int depth) {
 		int queryElevation = depth;
 		if(!isInside(depth))
 			return fillerRock;
 		return layers.get(queryElevation);
 	}
 	
-	private final boolean isInside(int depth) {
+	public final boolean isInside(int depth) {
 		return (depth >0 && depth <=thickness);
 	}
 
@@ -81,7 +81,7 @@ class Column implements IGeology {
 			this.layers.addAll(layers); return this;
 		}
 		
-		public IGeology build() {
+		public IColumn build() {
 			return new Column(this);
 		}
 		
